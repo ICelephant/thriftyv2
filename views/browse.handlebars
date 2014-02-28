@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Wed Feb 12 2014 03:00:05 GMT+0000 (UTC) -->
+<html data-wf-site="52f00e27a8b031ee5c000058">
+<head>
+  <meta charset="utf-8">
+  <title>Browse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/thrifty.webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/notification.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script type="text/javascript" src="js/cookies.js"></script>
+
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Montserrat:400,700","Bitter:400,700"]
+      }
+    });
+  </script>
+
+  <script>
+    if (/mobile/i.test(navigator.userAgent)) document.documentElement.className += ' w-mobile';
+  </script>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
+  <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs5shiv/3.75shiv.min.js"></script><![endif]-->
+  <link rel="apple-touch-icon" href="https://y7v4p6k4.ssl.hwcdn.net/51d1bb05fc804b2621000001/51e06f0756878bb26a000008_webclip-slate.png">
+
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+</head>
+<body>
+  <div class="w-nav" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
+    <div class="w-container navedited">
+      <a class="w-nav-brand navedited" href="#"></a>
+      <nav class="w-nav-menu navedited" role="navigation"><a class="w-nav-link navedited" href="/">Home</a>
+        <a class="w-nav-link navedited" href="browse">Browse</a>
+        <a class="w-nav-link navedited" href="findus">Find Us</a><a class="w-nav-link navedited" href="calendar">Calendar</a>
+       <a class="w-nav-link navedited" href="wishlist">My Wishlist</a>
+
+        <a class="w-nav-link navedited"
+        href="help">FAQ</a>
+
+        <script>
+        if(getCookie("username") != "")
+           document.write("<a class=\"w-nav-link navedited\" href=\"\/\" onclick=\"logout();\">Logout</a>");
+        </script>
+      </nav>
+      <div class="w-nav-button">
+        <div class="w-icon-nav-menu"></div>
+      </div>
+    </div>
+  </div>
+  <h1 class="browseheading">Browse</h1>
+  <div class="row">
+
+  <input style="margin-left:61%;height:20px;box-shadow: 0 0 5px rgb(147, 197, 189);border: 1px solid rgb(147,192,189);" placeholder="Search" size="12" type="text" onkeyup="filter(this)"/>
+</div>
+  <br>
+  <div class="row">
+  {{#each group}}
+        {{#each item}}
+        <div class="col-4 col-xs-4 name" style="min-height: 170px;">
+          <a href="itemdetail/{{name}}"><img src={{imageURL}} /></a>
+            <center><a style="font-family:Bitter;"href="itemdetail/{{name}}">{{name}} </a></center>
+        </div>
+      {{/each}}
+  {{/each}}
+</div>
+<script language="javascript" type="text/javascript">
+    function filter(element) {
+
+        var value = $(element).val().toLowerCase();
+
+        var string = document.body.innerHTML.toLowerCase();
+
+        $(".name").each(function() {
+            if ($(this).text().toLowerCase().search(value) > -1) {
+                $(this).show();
+            }
+            else {
+                $(this).hide();
+            }
+        });
+    }
+
+
+   $(document).ready(function() { 
+      checkCookie();
+    });
+</script>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js">
+
+</body>
+</html>

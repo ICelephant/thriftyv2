@@ -1,0 +1,90 @@
+{
+	"group": [
+	    { "item":
+		 [ 
+     {
+	  		"name": "Bleached Flannel",
+	  		"condition": "Used",
+		  	"size": "M",
+		  	"color": "Pink and black plaid",
+		  	"price": "$12.00",
+			"imageURL": "http://media-cache-ec0.pinimg.com/736x/ce/7c/d2/ce7cd28bb7272d3df0770f1cf189d9df.jpg"			
+		  },
+		  {
+	  		"name": "Blue Top",
+	  		"condition": "Almost new",
+		  	"size": "Small",
+		  	"color": "Navy Blue",
+		  	"price": "$9.00",
+			"imageURL": "http://media-cache-ak0.pinimg.com/736x/cb/1e/4a/cb1e4ab3b996dd926e7234185f03f96c.jpg"
+		  },
+		  {
+	  		"name": "Lace Dress",
+	  		"condition": "Worn once",
+		  	"size": "Small",
+		  	"color": "Cream",
+		  	"price": "$14.00",
+			"imageURL": "http://media-cache-ec0.pinimg.com/736x/2e/bf/03/2ebf03f1fc61ee9a0a3cd76f274f2a03.jpg"
+		  }
+    ]
+   },
+		{ "item":
+    [    
+      {   
+		  	"name": "Trench Coat",
+		  	"condition": "Worn twice",
+		  	"size": "Medium",
+		  	"color": "Black",
+		  	"price": "$20.00",
+		  	"imageURL": "http://media-cache-ak0.pinimg.com/736x/b9/20/2a/b9202a7a448430a631f3f69958920ccf.jpg"			
+		  },
+		  {
+		  	"name": "Black Retro Pants",
+		  	"condition": "Almost new",
+		  	"size": "Small",
+		  	"color": "Black with white patterns",
+		  	"price": "$10.00",		  	
+		  	"imageURL": "http://media-cache-ec0.pinimg.com/736x/c6/5e/0e/c65e0e47e17361d77565be9e02bb6003.jpg"			
+		  },
+	  	{
+	  		"name": "Floral Backpack",
+	  		"condition": "Used",
+		  	"size": "none",
+		  	"color": "Pattern",
+		  	"price": "$8.00",	
+	  		"imageURL": "http://media-cache-ec0.pinimg.com/736x/5e/05/43/5e0543ce0ea5526ea6a40d2c381d69a6.jpg"			
+	  	}
+    ]
+    },
+
+
+	{ "item":
+    [    
+      {   
+		  	"name": "Boots",
+		  	"condition": "New",
+		  	"size": "8.5W",
+		  	"color": "Brown",
+		  	"price": "$18.00",
+		  	"imageURL": "http://media-cache-ak0.pinimg.com/736x/c8/ef/b9/c8efb9a5da43b22f9a400ab0c5889c46.jpg"			
+		  },
+		  {
+		  	"name": "Sparkly Heels",
+		  	"condition": "Worn once",
+		  	"size": "7.5 W",
+		  	"color": "Bronze",
+		  	"price": "$15.00",		  	
+		  	"imageURL": "http://media-cache-ak0.pinimg.com/736x/01/31/27/013127334216f93bc802c2a28411b428.jpg"			
+		  },
+	  	{
+	  		"name": "Sandals",
+	  		"condition": "Used",
+		  	"size": "8W",
+		  	"color": "Mint",
+		  	"price": "$8.00",	
+	  		"imageURL": "http://media-cache-ak0.pinimg.com/736x/e2/6c/11/e26c11f60a82908a073fada2f008a2ba.jpg"			
+	  	}
+    ]
+    }
+	]
+}

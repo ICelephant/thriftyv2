@@ -1,0 +1,77 @@
+  <!DOCTYPE html>
+  <!-- This site was created in Webflow. http://www.webflow.com-->
+  <!-- Last Published: Wed Feb 12 2014 03:00:05 GMT+0000 (UTC) -->
+  <html data-wf-site="52f00e27a8b031ee5c000058">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/webflow.css">
+    <link rel="stylesheet" type="text/css" href="css/thrifty.webflow.css">
+    <link rel="stylesheet" type="text/css" href="css/notification.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script type="text/javascript" src="js/cookies.js"></script>
+
+    <script>
+      WebFont.load({
+        google: {
+          families: ["Montserrat:400,700","Bitter:400,700"]
+        }
+      });
+    </script>
+    <script>
+      if (/mobile/i.test(navigator.userAgent)) document.documentElement.className += ' w-mobile';
+    </script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs5shiv/3.75shiv.min.js"></script><![endif]-->
+    <link rel="apple-touch-icon" href="https://y7v4p6k4.ssl.hwcdn.net/51d1bb05fc804b2621000001/51e06f0756878bb26a000008_webclip-slate.png">
+  </head>
+  <body>
+    <div class="login">
+      <div class="w-nav" data-collapse="medium" data-animation="default" data-duration="400"></div>
+    </div>
+    <div class="w-form">
+      <form name="email-form" data-name="Email Form" onsubmit="setAndRedirect()">
+        <div class="w-nav" data-collapse="medium" data-animation="default" data-duration="400"></div>
+        <div class="w-nav" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
+
+          <div class="w-container navedited">
+            <a class="w-nav-brand navedited"></a>
+            <nav class="w-nav-menu navedited" role="navigation"><a class="w-nav-link navedited" href="/">Home</a><a class="w-nav-link navedited" href="browse">Browse</a><a class="w-nav-link navedited" href="findus">Find Us</a><a class="w-nav-link navedited" href="calendar">Calendar</a>
+              <a class="w-nav-link" href="wishlist">My Wishlist</a>
+              <a
+              class="w-nav-link" href="help">FAQ</a>
+            </nav>
+            <div class="w-nav-button">
+              <div class="w-icon-nav-menu icon"></div>
+            </div>
+          </div>
+        </div>
+
+        <h1 style="font-size: 30px;">Log In -- Sign Up</h1>
+
+        <center><input style="width:80%;" class="w-input" id="email" type="email" placeholder="Enter your email address"  name="email" data-name="Email" required="required"></input></center>
+
+
+        <center><input style="width:80%;" type="password" class="w-input" placeholder="Enter your password" name="password" data-name="Password" required="required"></input></center>
+
+        <center><button style="background-color:#93c0bd" class="button" id="not1" type="submit">Submit</button></center>
+
+      </form>
+    </div>
+
+    <script type="text/javascript">
+      function setAndRedirect() {
+         var name = $("#email").val();
+         setCookie("username", name);
+         setCookie("justLoggedIn", 1)
+         window.location.href='/browse';
+      }
+    </script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/webflow.js"></script>
+  </body>
+  </html>

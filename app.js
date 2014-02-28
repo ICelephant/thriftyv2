@@ -6,7 +6,7 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
 var mongoose = require('mongoose');
 
 
@@ -17,8 +17,7 @@ var index = require('./routes/index'),
     login = require('./routes/login'),
     wishlist = require('./routes/wishlist'),
     help = require('./routes/help'),
-    itemdetail = require('./routes/itemdetail'),
-    response = require('./routes/response');
+    itemdetail = require('./routes/itemdetail');
 
 // Example route
 // var user = require('./routes/user');
@@ -35,7 +34,8 @@ var app = express();
 // all environments
 app.set('port', process.env.PORT || 8080);
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', handlebars());
+//app.engine('handlebars', handlebars());
+app.engine('handlebars', handlebars({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(express.favicon());
 app.use(express.logger('dev'));
@@ -61,7 +61,6 @@ app.get('/wishlist', wishlist.view);
 app.get('/help', help.view);
 app.get('/login', login.view);
 app.get('/itemdetail/:name', itemdetail.viewItem);
-app.get('/response', response.view);
 app.post('/wishlist/new', wishlist.addToWishlist);
 app.post('/wishlist/delete', wishlist.deleteFromWishlist);
 

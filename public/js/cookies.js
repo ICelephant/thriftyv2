@@ -28,22 +28,6 @@ function checkCookie()
   }
 }
 
-/*
-$(document).ready(function(){
-  
-      systemMessageInit(); //initialize 
-      
-  
-      $('#not1').on('click', function(){
-        systemMessage.sendMessage(0,'You have successfully signed in!');
-      });
- 
-      
-}).jQuery;
-
-
-
-
 /*systemMessage javascript */
 
 
@@ -97,4 +81,11 @@ function insertAfter(referenceNode, newNode) {
 
    function logout() {
      setCookie("username", "");
+   }
+
+   function setAndRedirect() {
+      var name = $("#email").val();
+      setCookie("username", name);
+      setCookie("justLoggedIn", 1)
+      window.location.href='/browse';
    }

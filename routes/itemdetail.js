@@ -26,6 +26,6 @@ exports.viewItem = function(req, res){
     'size' : size,
     'condition' : condition,
     'color': color,
-    'imageURL' : imageURL
-	});
+    'imageURL' : imageURL,
+	  layout:'itemlayout'});
 };

@@ -20,7 +20,7 @@ function getCookie(cname)
 function checkCookie()
 {
   var user=getCookie("justLoggedIn");
-  if (user!="0")
+  if (user==="1")
   {
      systemMessageInit();
      systemMessage.sendMessage(0, 'You have successfully signed in!');

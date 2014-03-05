@@ -88,7 +88,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-48673967-1', 'thriftyv2.herokuapp.com');
-
+  ga('send', 'pageview');
   document.getElementById('find_us_link').onclick=function() {
   ga('send', 'event' , 'find_us_click', 'click' );
 };

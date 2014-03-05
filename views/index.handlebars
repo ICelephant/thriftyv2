@@ -76,9 +76,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   <div class="section white" id="page-nav-organize"></div>
   <div class="section subfooter white"></div>
   {{#if show_find_us}}
-  <div class="secondsection" style="background-image: url('../images/Screen%20Shot%202014-02-07%20at%2012.34.29%20AM.png')";>
+  <div class="secondsection" style="background-image: url(../images/Screen%20Shot%202014-02-07%20at%2012.34.29%20AM.png)">
   {{else}}
-  <div class="secondsection" style="background-image: url(/images/Screen%20Shot%202014-02-07%20at%2012.34.29%20AM.png)";>
+  <div class="secondsection" style="background-image: url(/images/Screen%20Shot%202014-02-07%20at%2012.34.29%20AM.png)">
   {{/if}}
 
 
@@ -106,7 +106,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   ga('create', 'UA-48673967-1', 'thriftyv2.herokuapp.com');
   ga('send', 'pageview');
   var x = document.getElementById('find_us_link');
-  if(x) {
+  if'null' != x) {
     x.onclick=function() {
     ga('send', 'event' , 'find_us_click', 'click' );
    }

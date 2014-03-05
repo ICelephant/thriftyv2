@@ -28,14 +28,19 @@
     <div class="w-container">
       <img class="center" src="images/thriftylogo%20copy.png" width="160" alt="52f01a15d5851dec5c00010e_thriftylogo%20copy.png">
     </div>
-    </header><a style="margin-left:5%;"class="nav-link" href="calendar" id="calendar_click">Calendar</a>
+    </header>
+
 {{#if show_find_us }}
-
-<a class="nav-link" href="findus" id="find_us_link">Find us</a>
-{{/if}}
-
-<a style="margin-left: 5%;" class="nav-link" href="browse">Browse</a><a style="margin-left: 10%;" class="nav-link" href="help">FAQ</a>
-    </div>
+   <a style="margin-left:2%;"class="nav-link" href="calendar" id="calendar_click">Calendar</a>
+   <a style="margin-left:2%;"class="nav-link" href="findus" id="find_us_link">Find us</a>
+   <a style="margin-left:2%;"class="nav-link" href="browse">Browse</a>
+   <a style="margin-left:2%;"class="nav-link" href="help">FAQ</a>
+ {{else}}
+   <a style="margin-left:5%;"class="nav-link" href="calendar" id="calendar_click">Calendar</a>
+   <a style="margin-left: 5%;" class="nav-link" href="browse">Browse</a>
+   <a style="margin-left: 10%;" class="nav-link" href="help">FAQ</a>
+{{/if}} 
+ </div>
   </header>
   <div class="section hero">
     <div class="thriftytext">Thrifty is a unique way to buy and sell vintage clothing through mobile trucks.</div>
@@ -67,7 +72,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-48673967-1', {'cookieDomain': 'none'});
+  ga('create', 'UA-48673967-1', 'thriftyv2.herokuapp.com');
 
   $("#find_us_link").click(function() {
   ga('send', 'event' , 'find_us_click', 'click' );

@@ -60,9 +60,11 @@ app.get('/calendar', calendar.view);
 app.get('/wishlist', wishlist.view);
 app.get('/help', help.view);
 app.get('/login', login.view);
+app.get('/index',index.viewTwo)
 app.get('/itemdetail/:name', itemdetail.viewItem);
 app.post('/wishlist/new', wishlist.addToWishlist);
 app.post('/wishlist/delete', wishlist.deleteFromWishlist);
+
 
 // Example route
 // app.get('/users', user.list);

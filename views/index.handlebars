@@ -28,7 +28,13 @@
     <div class="w-container">
       <img class="center" src="images/thriftylogo%20copy.png" width="160" alt="52f01a15d5851dec5c00010e_thriftylogo%20copy.png">
     </div>
-    </header><a style="margin-left:5%;"class="nav-link" href="calendar">Calendar</a><!--<a class="nav-link" href="findus">Find us</a>--><a style="margin-left: 5%;" class="nav-link" href="browse">Browse</a><a style="margin-left: 10%;" class="nav-link" href="help">FAQ</a>
+    </header><a style="margin-left:5%;"class="nav-link" href="calendar" id="calendar_click">Calendar</a>
+{{#if show_find_us }}
+
+<a class="nav-link" href="findus" id="find_us_link">Find us</a>
+{{/if}}
+
+<a style="margin-left: 5%;" class="nav-link" href="browse">Browse</a><a style="margin-left: 10%;" class="nav-link" href="help">FAQ</a>
     </div>
   </header>
   <div class="section hero">
@@ -61,8 +67,16 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-48673967-1', 'thriftyv2.herokuapp.com');
-  ga('send', 'pageview');
+  ga('create', 'UA-48673967-1', {'cookieDomain': 'none'});
+
+  $("#find_us_link").click(function() {
+  ga('send', 'event' , 'find_us_click', 'click' );
+});
+$("#calendar_click").click(function() {
+  ga('send', 'event' , 'calendar_click', 'click' );
+});
+
+
 
 </script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

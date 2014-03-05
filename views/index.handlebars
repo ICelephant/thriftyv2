@@ -46,7 +46,12 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 <body>
   <header class="center">
     <div class="w-container">
-      <img class="center" src="images/thriftylogo%20copy.png" width="160" alt="52f01a15d5851dec5c00010e_thriftylogo%20copy.png">
+    {{#if find_us_link}}
+      <img class="center" src="../images/thriftylogo%20copy.png" width="160" alt="52f01a15d5851dec5c00010e_thriftylogo%20copy.png">
+    {{else}}
+      <img class="center" src="../images/thriftylogo%20copy.png" width="160" alt="52f01a15d5851dec5c00010e_thriftylogo%20copy.png">
+    {{/if}}
+
     </div>
     </header>
 
@@ -107,6 +112,10 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 </script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script type="text/javascript" src="js/webflow.js"></script>
+ {{#if find_us_link}}
+  <script type="text/javascript" src="../js/webflow.js"></script>
+{{else}}
+    <script type="text/javascript" src="/js/webflow.js"></script>
+{{/if}}
 </body>
 </html>

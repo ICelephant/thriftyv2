@@ -98,13 +98,15 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
       </div>L.Chaddock, I. Chin, A.Rodriguez
     </div>
   </div>
+
+
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-48673967-1', 'intense-mountain-3707.herokuapp.com');
+  ga('create', 'UA-48705416-1', 'intense-mountain-3707.herokuapp.com');
   ga('send', 'pageview');
   var x = document.getElementById('find_us_link');
   if'null' != x) {
@@ -112,12 +114,11 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     ga('send', 'event' , 'find_us_click', 'click' );
    }
 };
-
-  document.getElementById('calendar_link').onclick=function() {
+ document.getElementById('calendar_link').onclick=function() {
   ga('send', 'event', 'calendar_click', 'click' );
-};
 
 </script>
+  
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
  {{#if find_us_link}}
   <script type="text/javascript" src="../js/webflow.js"></script>
